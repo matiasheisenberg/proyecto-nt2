@@ -16,10 +16,10 @@
         <div class="card-body">
           <h5 class="card-title">{{show.name}}</h5>
           <h6 class="card-title">{{show.network}}</h6>
-          <a
-            href="#"
+          <button
             class="btn btn-primary"
-          >Ver detalle</a>
+            @click="navegateToDetail(show.id)"
+          >Ver detalle</button>
         </div>
       </div>
     </div>
@@ -28,6 +28,13 @@
 
 <script>
 export default {
+  methods:{
+    navegateToDetail(serieId){
+      console.log("id de la serie",serieId)
+      // this.$router.push({path:`/detalle/${id}`})
+      this.$router.push({name:'detalle',params:{id:serieId}})
+    }
+  },
   data() {
     return {
       series: {
