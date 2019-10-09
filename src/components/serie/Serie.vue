@@ -1,10 +1,10 @@
 <template>
   <div>
     <h1>Series</h1>
-    <div class="card-columns">
+    <div class="card-deck">
       <div
         class="card"
-        style="width: 12rem;"
+        
         v-for="show in series.tv_shows"
         :key="show.id"
       >
@@ -38,22 +38,8 @@ export default {
   data() {
     return {
       series: {
-        total: "13793",
-        page: 1,
-        pages: 690,
         tv_shows: [
-          {
-            id: 35624,
-            name: "The Flash",
-            permalink: "the-flash",
-            start_date: "2014-10-07",
-            end_date: null,
-            country: "US",
-            network: "The CW",
-            status: "Running",
-            image_thumbnail_path:
-              "https://static.episodate.com/images/tv-show/thumbnail/35624.jpg"
-          },
+          
           {
             id: 23455,
             name: "Game of Thrones",
@@ -93,31 +79,6 @@ export default {
               "https://static.episodate.com/images/tv-show/thumbnail/46778.jpg"
           },
 
-          {
-            id: 8362,
-            name: "The Big Bang Theory",
-            permalink: "the-big-bang-theory",
-            start_date: "2007-09-24",
-            end_date: null,
-            country: "US",
-            network: "CBS",
-            status: "Ended",
-            image_thumbnail_path:
-              "https://static.episodate.com/images/tv-show/thumbnail/8362.jpg"
-          },
-
-          {
-            id: 29977,
-            name: "Vikings",
-            permalink: "vikings",
-            start_date: "2013-03-03",
-            end_date: null,
-            country: "CA",
-            network: "History",
-            status: "Running",
-            image_thumbnail_path:
-              "https://static.episodate.com/images/tv-show/thumbnail/29977.jpg"
-          }
         ]
       }
     };
