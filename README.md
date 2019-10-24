@@ -1,5 +1,5 @@
 # Vue.js router
-## Ejemplo de implementacion de rutas en Vuejs para la materia "Programación en nuevas tecnologias 2" 
+## proyecto de nuevas tecnologias PRUEBA
 
 #### Para manejar sus dependencias
 ```
