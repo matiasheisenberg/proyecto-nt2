@@ -11,6 +11,7 @@
     <ul class="nav nav-pills nav-fill">
       <router-link to="/" tag="li" exact class="nav-link">Home</router-link>
       <router-link to="/serie" tag="li" class="nav-link">Series</router-link>
+      <router-link to="/matias" tag="li" class="nav-link">Matias</router-link>
     </ul>
     <hr>
     <router-view></router-view>
