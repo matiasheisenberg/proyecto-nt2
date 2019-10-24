@@ -12,6 +12,9 @@
       <router-link to="/" tag="li" exact class="nav-link">Home</router-link>
       <router-link to="/serie" tag="li" class="nav-link">Series</router-link>
       <router-link to="/matias" tag="li" class="nav-link">Matias</router-link>
+      <router-link to="/fede" tag="li" class="nav-link">Fede</router-link>
+      <router-link to="/yeff" tag="li" class="nav-link">Yeff</router-link>
+      <router-link to="/ini" tag="li" class="nav-link">Ini</router-link>
     </ul>
     <hr>
     <router-view></router-view>

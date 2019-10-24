@@ -3,7 +3,8 @@ import SerieDetail from './components/serie/SerieDetail.vue'
 import Home from './components/Home.vue'
 import Matias from './components/Matias.vue'
 import Fede from './components/Fede.vue'
-import Yeffer from './components/Yeffer.vue'
+import Ini from './components/Ini.vue'
+//import Yeff from './components/Yeff.vue'
 
 export const routes = [
     {path:'/',component:Home},
@@ -11,5 +12,6 @@ export const routes = [
     {path:'/detalle/:id',name:'detalle',component:SerieDetail},
     {path:'/matias',component:Matias},
     {path:'/fede',component:Fede},
-    {path:'/yeffer',component:Yeffer},
+    {path:'/ini',component:Ini},
+    //{path:'/yeff',component:Yeff},
 ]
