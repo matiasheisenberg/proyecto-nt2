@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import BootstrapVue from 'bootstrap-vue'
+import BootstrapVue, { BCardBody } from 'bootstrap-vue'
 //Importamos VueRouter
 import VueRouter from 'vue-router'
 import App from './App.vue'
@@ -23,3 +23,6 @@ new Vue({
   router, //Lo agregamos a la instancia de Vue.
   render: h => h(App),
 }).$mount('#app')
+
+
+
