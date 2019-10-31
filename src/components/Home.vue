@@ -1,25 +1,34 @@
 <template>
 
-    <div>
-       <p>Comprador</p> 
-<div>
-  <b-button>Automovil coupé</b-button>
- <p></p>
-  <b-button>Automovil cuatro puertas</b-button>
-<p></p> 
- <b-button>Camioneta 4x4</b-button>
- <p></p>
-  <b-button>Camioneta Suv</b-button>
+ <div>
+   <b-carousel
+    id="carousel-fade"
+    style="text-shadow: 0px 0px 2px #000"
+    fade
+    indicators
+    img-width="1024"
+    img-height="480"
+  >
+    <b-carousel-slide
+      caption="First slide"
+      img-src="https://picsum.photos/1024/480/?image=10"
+    ></b-carousel-slide>
+    <b-carousel-slide
+      caption="Second Slide"
+      img-src="https://picsum.photos/1024/480/?image=12"
+    ></b-carousel-slide>
+    <b-carousel-slide
+      caption="Third Slide"
+      img-src="https://picsum.photos/1024/480/?image=22"
+    ></b-carousel-slide>
+  </b-carousel>
 </div>
-       <p>Esta es la pagina de inicio de la app <mark>vue-router-template</mark></p>
-    </div>
 
-   
-    
 </template>
+
 
 <style>
 body {
-  background-color: coral;
+  background-color: rgb(199, 199, 199);
 }
 </style>
