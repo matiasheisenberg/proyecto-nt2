@@ -1,7 +1,12 @@
 <template>
   <div>
     <h1>Encontra el auto que estas buscando</h1>
-    <p>{{infoMarker}}</p>
+    <p>{{infoMarkerMarca}}</p>
+    <p>{{infoMarkerModelo}}</p>
+    <p>{{infoMarkerAño}}</p>
+    <p>{{infoMarkerKilometros}}</p>
+    <p>{{infoMarkerColor}}</p>
+    <p>{{infoMarkerPrecio}}</p>
     <GmapMap
       :center="center"
       :zoom="12"
@@ -41,15 +46,25 @@ export default {
           coords: 
           { lat: -34.609648, lng: -58.429089 },
           iconImage: 
-          "https://cdn1.iconfinder.com/data/icons/cars-5/512/mercedes-pointer-point-car-auto-poi-map-place-geo-128.png",
-          content: 
-          "Mercedes Benz C250 COUPE<p>Año: 2012</p><p>Kilometros: 50.000</p> <p>Color: Blanco</p><p>Precio: $50.000</p>"
+          "https://www.iconninja.com/files/595/83/747/mercedes-benz-icon.png",
+          contentMarca: 
+          "Mercedes Benz",
+          contentModelo:
+          "C250 COUPE",
+          contentAño:
+          "2012",
+          contentKilometros:
+          "Kilometros: 50.000",
+          contentColor:
+          "Blanco",
+          contentPrecio:
+          "$50.000"
         },
         {
           coords: 
           { lat: -34.605174, lng: -58.432752 },
           iconImage: 
-          "https://image.flaticon.com/icons/png/128/805/805930.png",
+          "https://cdn.iconscout.com/icon/free/png-256/ford-1-202767.png",
           content: 
           "Ford Focus 4 puertas"
         },
@@ -67,7 +82,12 @@ export default {
   methods:{
     test(marker){
       this.center = marker.coords
-      this.infoMarker = marker.content
+      this.infoMarkerMarca = marker.contentMarca
+      this.infoMarkerModelo=marker.contentModelo
+      this.infoMarkerAño=marker.contentAño
+      this.infoMarkerKilometros=marker.contentKilometros
+      this.infoMarkerColor=marker.contentColor
+      this.infoMarkerPrecio=marker.contentPrecio
     }
   }
 };
