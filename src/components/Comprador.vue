@@ -1,17 +1,43 @@
 <template>
   <div>
+    
     <h1>Encontra el auto que estas buscando</h1>
+    <b-card
+    @click="test(m)"
+    title= ""
+    img-src="https://picsum.photos/600/300/?image=25"
+    img-alt="Image"
+    img-top
+    tag="article"
+    style="max-width: 20rem;"
+    class="mb-2"
+  >
+    <b-card-text>
+     <p>{{infoMarkerMarca}}</p>
+     <p>{{infoMarkerModelo}}</p>
+    <p>{{infoMarkerAño}}</p>
+    <p>{{infoMarkerKilometros}}</p>
+    <p>{{infoMarkerColor}}</p>
+    <p>{{infoMarkerPrecio}}</p>
+    </b-card-text>
+
+    <b-button href="#" variant="primary">Go somewhere</b-button>
+  </b-card>
+    
     <p>{{infoMarkerMarca}}</p>
     <p>{{infoMarkerModelo}}</p>
     <p>{{infoMarkerAño}}</p>
     <p>{{infoMarkerKilometros}}</p>
     <p>{{infoMarkerColor}}</p>
     <p>{{infoMarkerPrecio}}</p>
+    
+    
+    
     <GmapMap
       :center="center"
       :zoom="12"
       map-type-id="terrain"
-      style="width: 1000px; height: 600px"
+      style="width: 800px; height: 600px"
       
       
     >
