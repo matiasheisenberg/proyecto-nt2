@@ -13,10 +13,10 @@
           </b-nav-item>
           <b-nav-item-dropdown text="User" right>
             <b-dropdown-item >
-              <router-link to="/comprador" >Comprador</router-link>
+              <router-link to="/comprador" >Compra tu proximo auto</router-link>
             </b-dropdown-item>
             <b-dropdown-item href="#">
-              <router-link to="/vendedor" >Vendedor</router-link>
+              <router-link to="/vendedor" >Vende tu auto</router-link>
             </b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>

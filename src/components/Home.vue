@@ -10,16 +10,16 @@
     img-height="480"
   >
     <b-carousel-slide
-      caption="First slide"
-      img-src="https://picsum.photos/1024/480/?image=10"
+      caption="Tu proximo automovil esta alli afuera"
+      img-src="https://cuyomotor.com.ar/wp-content/uploads/2018/12/Audi-A1-2019-1.jpg"
     ></b-carousel-slide>
     <b-carousel-slide
-      caption="Second Slide"
-      img-src="https://picsum.photos/1024/480/?image=12"
+      caption="Empresa lider en venta de autos usados"
+      img-src="https://www.elfinanciero.com.mx/uploads/2019/05/03/1c280e54c11556901706_standard_desktop_medium_retina.png"
     ></b-carousel-slide>
     <b-carousel-slide
-      caption="Third Slide"
-      img-src="https://picsum.photos/1024/480/?image=22"
+      caption="Trabajamos sin comision de venta"
+      img-src="https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2019/01/23124051/los-autos-mas-vendidos-de-latam-de-2018-1920-.jpg"
     ></b-carousel-slide>
   </b-carousel>
 </div>
