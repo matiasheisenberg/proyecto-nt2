@@ -24,8 +24,10 @@
     </b-card-text>
 
     <b-button @click="reservar(id)" variant="primary">Reservar vehiculo</b-button>
-    <b-button> <router-link to="/detallecomprador"> Detalles del vendedor </router-link></b-button>
+    <b-button> <router-link to="{ name: 'detallecomprador', params: {placeName: 'hola' } }">Detalles del vendedor </router-link></b-button>
   </b-card>
+
+  
     
  
     <b-button @click="estado()" variant="primary">Estado de vehículos</b-button>
