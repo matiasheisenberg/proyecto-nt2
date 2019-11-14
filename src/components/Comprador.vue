@@ -20,12 +20,15 @@
     <p>{{infoMarkerKilometros}}</p>
     <p>{{infoMarkerColor}}</p>
     <p>{{infoMarkerPrecio}}</p>
+
     </b-card-text>
 
-    <b-button href="#" variant="primary">Info Vendedor</b-button>
+    <b-button @click="reservar(id)" variant="primary">Reservar vehiculo</b-button>
+    <b-button> <router-link to="/detallecomprador"> Detalles del vendedor </router-link></b-button>
   </b-card>
     
  
+    <b-button @click="estado()" variant="primary">Estado de vehículos</b-button>
 
     
     <GmapMap
@@ -69,6 +72,7 @@ export default {
       markers: [
         {
           coords: { lat: -34.609648, lng: -58.429089 },
+          id: "0",
           iconImage:
             "https://www.iconninja.com/files/595/83/747/mercedes-benz-icon.png",
           contentMarca: "Mercedes Benz",
@@ -78,10 +82,12 @@ export default {
           contentAño: "2012",
           contentKilometros: "Kilometros: 50.000",
           contentColor: "Blanco",
-          contentPrecio: "$50.000"
+          contentPrecio: "$50.000",
+          reservado: "false"
         },
         {
           coords: { lat: -34.605174, lng: -58.432752 },
+          id: "1",
           iconImage:
             "https://cdn.iconscout.com/icon/free/png-256/ford-1-202767.png",
           contentMarca: "Ford",
@@ -91,10 +97,12 @@ export default {
           contentAño: "2014",
           contentKilometros: "Kilometros: 25.000",
           contentColor: "Gris",
-          contentPrecio: "$30.000"
+          contentPrecio: "$30.000",
+          reservado: "false"
         },
         {
           coords: { lat: -34.605421, lng: -58.417517 },
+          id: "2",
           iconImage:
             "https://cdn.iconscout.com/icon/free/png-256/jeep-59-202822.png",
           contentMarca: "Jeep",
@@ -104,7 +112,8 @@ export default {
           contentAño: "2016",
           contentKilometros: "Kilometros: 10.500",
           contentColor: "Negro",
-          contentPrecio: "$43.000"
+          contentPrecio: "$43.000",
+          reservado: "false"
         }
       ]
     };
@@ -119,6 +128,26 @@ export default {
       this.infoMarkerColor = marker.contentColor;
       this.infoMarkerPrecio = marker.contentPrecio;
       this.infoMarkerFoto = marker.contentFoto;
+      this.infoStatus = marker.status;
+      this.id = marker.id;
+    },
+    //Método que recibe por parámetro el id del vehículo, para hacer 
+    reservar(id){
+      alert(id);
+      this.markers[id].reservado = "true";
+      alert('El vehículo '+ this.markers[id] + ' fue reservado.');
+    },
+    estado(){
+          
+for(let i = 0; i < this.markers.length; i++) {
+  if (this.markers[i].reservado == "true"){
+
+  alert('El vehículo: '+this.markers[i].id + 'está reservado.'     );
+  }else{
+
+  alert('El vehículo: '+this.markers[i].id + 'está disponible.'     );
+  }
+}
     }
   }
 };

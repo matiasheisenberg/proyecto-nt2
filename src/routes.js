@@ -4,6 +4,7 @@ import Home from './components/Home.vue'
 import Comprador from './components/Comprador.vue'
 import Vendedor from './components/Vendedor.vue'
 import Confirmacion from './components/Confirmacion.vue'
+import DetalleComprador from './components/DetalleComprador.vue'
 //import Yeff from './components/Yeff.vue'
 
 export const routes = [
@@ -12,6 +13,7 @@ export const routes = [
     {path:'/detalle/:id',name:'detalle',component:SerieDetail},
     {path:'/comprador',component:Comprador},
     {path:'/vendedor',component:Vendedor},
-    {path:'/confirmacion',component:Confirmacion}
+    {path:'/confirmacion',component:Confirmacion},
+    {path:'/detallecomprador',component:DetalleComprador}
     
 ]
