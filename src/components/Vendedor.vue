@@ -147,7 +147,7 @@ export default {
   },
   created() {
     //Hacemos todo lo necesario antes de que se vea la pagina.
-    let añoMinimoDesdeServicio = 2015 //VENDRIA DESDE UN SERVICIO
+    let añoMinimoDesdeServicio = 1885 //VENDRIA DESDE UN SERVICIO
     let añoMaximoDesdeServicio = 2019 //VENDRIA DESDE UN SERVICIO
     this.añoMinimo = añoMinimoDesdeServicio;
     this.añoMaximo = añoMaximoDesdeServicio;

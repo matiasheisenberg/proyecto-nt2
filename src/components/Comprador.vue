@@ -23,8 +23,9 @@
 
     </b-card-text>
 
-    <b-button @click="reservar(id)" variant="primary">Reservar vehiculo</b-button>
-    <b-button> <router-link to="{ name: 'detallecomprador', params: {placeName: 'hola' } }">Detalles del vendedor </router-link></b-button>
+    <b-button @click="reservar(id)" :disabled="reservarBtnDisabled" variant="primary">Reservar vehiculo</b-button>
+   
+    <b-button> <router-link to="{ name: detallecomprador', params:{ id: 1 }}">Detalles del vendedor </router-link></b-button>
   </b-card>
 
   
@@ -70,6 +71,7 @@ export default {
   data() {
     return {
       center: { lat: -34.60903, lng: -58.447861 },
+      reservarBtnDisabled: false,
       infoMarker:"",
       markers: [
         {
@@ -137,19 +139,22 @@ export default {
     reservar(id){
       alert(id);
       this.markers[id].reservado = "true";
+      this.reservarBtnDisabled = true; 
       alert('El vehículo '+ this.markers[id] + ' fue reservado.');
     },
     estado(){
           
-for(let i = 0; i < this.markers.length; i++) {
-  if (this.markers[i].reservado == "true"){
+console.table(this.markers)
 
-  alert('El vehículo: '+this.markers[i].id + 'está reservado.'     );
-  }else{
+// for(let i = 0; i < this.markers.length; i++) {
+//   if (this.markers[i].reservado == "true"){
 
-  alert('El vehículo: '+this.markers[i].id + 'está disponible.'     );
-  }
-}
+//   alert('El vehículo: '+this.markers[i].id + 'está reservado.'     );
+//   }else{
+
+//   alert('El vehículo: '+this.markers[i].id + 'está disponible.'     );
+//   }
+// }
     }
   }
 };
