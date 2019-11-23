@@ -2,136 +2,175 @@
   <div>
     <h1>Complete los siguientes datos obligatorios</h1>
     <b-container fluid>
-      <b-row class="my-1">
-        <label for="input-none">Marca:</label>
+      <b-form @submit="onSubmit">
+        <b-row class="my-3">
+          <b-col sm="3">
+            <label>Marca del auto</label>
+          </b-col>
+          <b-col sm="9">
+            <select required class="custom-select" v-model="auto.marca">
+              <option disabled :value="null">Selecciona la marca del auto</option>
+              <option v-for="marca in arrayDeMarcas" :key="marca.id" :value="marca">{{marca.texto}}</option>
+            </select>
+          </b-col>
+        </b-row>
 
-        <select class="custom-select" v-model="auto.marcaSeleccionada">
-          <option v-for="marca in arrayDeMarcas" :key="marca.id" :value="marca">{{marca.texto}}</option>
-        </select>
-      </b-row>
-      <samp>{{auto}}</samp>
-      <b-row class="my-1" v-if="auto.marcaSeleccionada != null">
-        <b-col sm="3">
-          <label for="input-valid">Modelos:</label>
-        </b-col>
+        <b-row class="my-3" v-if="auto.marca != null">
+          <b-col sm="3">
+            <label>Modelo:</label>
+          </b-col>
 
-        <select class="custom-select" v-model="auto.modeloSeleccionado">
-          <option
-            v-for="modelo in auto.marcaSeleccionada.modelos"
-            :key="modelo.id"
-            :value="modelo.id"
-          >{{modelo.texto}}</option>
-        </select>
+          <b-col sm="9">
+            <select required class="custom-select" v-model="auto.modelo">
+              <option disabled :value="null">Selecciona el modelo del auto</option>
+              <option
+                v-for="modelo in auto.marca.modelos"
+                :key="modelo.id"
+                :value="modelo.texto"
+              >
+                {{modelo.texto}}
+              </option>
+            </select>
+          </b-col>
+        </b-row>
 
-        <!-- <select class="custom-select">
-         
+        <b-row class="my-3">
+          <b-col sm="3">
+            <label>Año</label>
+          </b-col>
 
-          <option value="3">Z4</option>
-          <option value="3">GS</option>
-          <option value="3">RT</option>
-        </select>-->
-      </b-row>
+          <b-col sm="9">
+            <b-form-input required v-model="auto.ano" type="range" :min="añoMinimo" :max="añoMaximo"></b-form-input>
+            <div class="mt-2">Año seleccionado: {{ auto.ano }}</div>
+          </b-col>
+        </b-row>
 
-      <b-row class="my-1">
-        <b-col sm="3">
-          <label for="range-1">Año</label>
-          <b-form-input id="range-1" v-model="auto.año" type="range" :min="añoMinimo" :max="añoMaximo"></b-form-input>
-          <div class="mt-2">Año: {{ auto.año }}</div>
-        </b-col>
+        <b-row class="my-3">
+          <b-col sm="3">
+            <label>Kilometros:</label>
+          </b-col>
+          <b-col sm="9">
+            <b-form-input type="number" required placeholder="Ingresa los kilometros del auto" v-model="auto.km"></b-form-input>
+          </b-col>
+        </b-row>
 
-        <b-col sm="9">
-          <b-form-input id="input-invalid"></b-form-input>
-        </b-col>
-      </b-row>
+         <b-row class="my-3">
+          <b-col sm="3">
+            <label>Color:</label>
+          </b-col>
+          <b-col sm="9">
+            <b-form-input required placeholder="Ingresa el color del auto" v-model="auto.color"></b-form-input>
+          </b-col>
+        </b-row>
 
-      <b-row class="my-1">
-        <b-col sm="3">
-          <label for="input-invalid">Kilometros:</label>
-        </b-col>
-        <b-col sm="9">
-          <b-form-input id="input-invalid" v-model="auto.km"></b-form-input>
-        </b-col>
-      </b-row>
+        <b-row class="my-3">
+          <b-col sm="3">
+            <label>Precio</label>
+          </b-col>
+          <b-col sm="9">
+            <b-form-input type="number" required placeholder="Ingresa el precio del auto" v-model="auto.precio"></b-form-input>
+          </b-col>
+        </b-row>
 
-      <b-row class="my-1">
-        <b-col sm="3">
-          <label for="input-invalid">Precio</label>
-        </b-col>
-        <b-col sm="9">
-          <b-form-input id="input-invalid" v-model="auto.precio"></b-form-input>
-        </b-col>
-      </b-row>
+        <b-row class="my-3">
+          <b-col sm="3">
+            <label>URL de la foto del auto</label>
+          </b-col>
+          <b-col sm="9">
+            <b-form-input required placeholder="Ingresa la url de la imagen" v-model="auto.foto"></b-form-input>
+          </b-col>
+        </b-row>
 
-      <b-row class="my-1">
-        <b-col sm="3">
-          <label for="input-invalid">Datos de contacto</label>
-        </b-col>
-        <b-col sm="9">
-          <b-form-input id="input-invalid" v-model="auto.contacto"></b-form-input>
-        </b-col>
-      </b-row>
+        <b-row class="my-3">
+          <b-col sm="3">
+            <label>Longuitud</label>
+          </b-col>
+          <b-col sm="9">
+            <b-form-input required placeholder="Ingresa la longitud de la ubicacion" v-model="auto.coords.lng"></b-form-input>
+          </b-col>
+        </b-row>
 
-      <b-row class="my-1">
-        <b-col sm="3">
-          <label for="input-invalid">Longuitud</label>
-        </b-col>
-        <b-col sm="9">
-          <b-form-input id="input-invalid"></b-form-input>
-        </b-col>
-      </b-row>
+        <b-row class="my-3">
+          <b-col sm="3">
+            <label>Latitud</label>
+          </b-col>
+          <b-col sm="9">
+            <b-form-input required placeholder="Ingresa la latitud de la ubicacion" v-model="auto.coords.lat"></b-form-input>
+          </b-col>
+        </b-row>
 
-      <b-row class="my-1">
-        <b-col sm="3">
-          <label for="input-invalid">latitud</label>
-        </b-col>
-        <b-col sm="9">
-          <b-form-input id="input-invalid"></b-form-input>
-        </b-col>
-      </b-row>
+        <hr />
+
+        <b-row class="my-3">
+          <b-col sm="3">
+            <label>Nombre</label>
+          </b-col>
+          <b-col sm="9">
+            <b-form-input required placeholder="Ingresa tu nombre" v-model="auto.nombreContacto"></b-form-input>
+          </b-col>
+        </b-row>
+
+        <b-row class="my-3">
+          <b-col sm="3">
+            <label>Telefono de contacto</label>
+          </b-col>
+          <b-col sm="9">
+            <b-form-input type="number" required placeholder="Ingresa un dato de contacto" v-model="auto.telefonoContacto"></b-form-input>
+          </b-col>
+        </b-row>
+
+        <b-row class="my-3">
+          <b-col sm="3">
+            <label>Email de contacto</label>
+          </b-col>
+          <b-col sm="9">
+            <b-form-input type="email" required placeholder="Ingresa un email" v-model="auto.emailContacto"></b-form-input>
+          </b-col>
+        </b-row>
+
+        <b-row class="my-3">
+          <b-col sm="3">
+            <label>Lugar de residencia</label>
+          </b-col>
+          <b-col sm="9">
+            <b-form-input required placeholder="Ingresa un lugar de residencia" v-model="auto.residenciaContacto"></b-form-input>
+          </b-col>
+        </b-row>
+
+        <b-button size="lg" type="submit" variant="primary" class="mb-2">Publicar el auto</b-button>
+
+      </b-form>
     </b-container>
-
-    <b-dropdown id="dropdown-1" text="Tipos de Automoviles" class="m-md-2">
-      <b-dropdown-item on:click="greet">Automovil coupe</b-dropdown-item>
-      <b-dropdown-item>Automovil cuatro puertas</b-dropdown-item>
-      <b-dropdown-item>Camioneta 4x4</b-dropdown-item>
-      <b-dropdown-item>Camioneta Suv</b-dropdown-item>
-      <b-dropdown-divider></b-dropdown-divider>
-    </b-dropdown>
-
-    <router-link to="Confirmacion">
-      <b-button variant="dark">Siguiente</b-button>
-    </router-link>
   </div>
 </template>
 
 
 <script>
+import { marcas } from '../marcas';
+import { markers } from '../markers';
+import { vendedores } from '../vendedores';
+
 export default {
   data() {
     return {
       name: "Vue.js",
       añoMinimo: null,
-      añoMaximo:2019,
+      añoMaximo: 2019,
       auto: {
+        coords: { lat: null, lng: null },
         precio: null,
         km: null,
-        marcaSeleccionada: null,
-        modeloSeleccionado: null,
-        año: null,
-        contacto:null
+        marca: null,
+        modelo: null,
+        ano: null,
+        foto: null,
+        color: null,
+        nombreContacto: null,
+        telefonoContacto: null,
+        emailContacto: null,
+        residenciaContacto: null
       },
-      arrayDeMarcas: [
-        {
-          id: 1,
-          texto: "honda",
-          modelos: [{ id: 1, texto: "Accord" }, { id: 2, texto: "500" }]
-        },
-        {
-          id: 2,
-          texto: "chevrolet",
-          modelos: [{ id: 3, texto: "Corza" }, { id: 4, texto: "Cruze" }]
-        }
-      ]
+      arrayDeMarcas: marcas,
     };
   },
   // define métodos dentro del objeto `methods`
@@ -143,7 +182,41 @@ export default {
       if (event) {
         alert(event.target.tagName);
       }
-    }
+    },
+    onSubmit(evt) {
+      evt.preventDefault();
+
+      this.auto.coords.lat = parseFloat(this.auto.coords.lat);
+      this.auto.coords.lng = parseFloat(this.auto.coords.lng);
+      this.auto.marca = this.auto.marca.texto;
+      this.auto.id = markers[markers.length - 1].id + 1;
+      vendedores.push({
+        telefono: this.auto.telefonoContacto,
+        email: this.auto.emailContacto,
+        residencia: this.auto.residenciaContacto
+      });
+
+      markers.push(this.auto);
+
+      this.$bvToast.toast(`Se publico el vehiculo correctamente`, {
+        title: `Publicacion exitosa!!!`,
+        variant: 'success',
+        solid: true
+      });
+
+      this.auto.coords = { lat: null, lng: null };
+      this.auto.precio = null;
+      this.auto.km = null;
+      this.auto.marca = null;
+      this.auto.modelo = null;
+      this.auto.ano = null;
+      this.auto.foto = null;
+      this.auto.color = null;
+      this.auto.nombreContacto = null;
+      this.auto.telefonoContacto = null;
+      this.auto.emailContacto = null;
+      this.auto.residenciaContacto = null;
+    },
   },
   created() {
     //Hacemos todo lo necesario antes de que se vea la pagina.
