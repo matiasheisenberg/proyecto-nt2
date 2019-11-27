@@ -1,0 +1,739 @@
+{
+  "marcas": [
+    {
+      "id": 1,
+      "texto": "Alfa Romeo",
+      "modelos": [
+        {
+          "id": 1,
+          "texto": "Mito"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "texto": "Audi",
+      "modelos": [
+        {
+          "id": 2,
+          "texto": "RS3"
+        },
+        {
+          "id": 3,
+          "texto": "A1"
+        },
+        {
+          "id": 4,
+          "texto": "A3"
+        },
+        {
+          "id": 5,
+          "texto": "A4"
+        },{
+          "id": 6,
+          "texto": "A5"
+        },
+        {
+          "id": 7,
+          "texto": "Q3"
+        },
+        {
+          "id": 8,
+          "texto": "Q5"
+        },
+        {
+          "id": 9,
+          "texto": "Q7"
+        },
+        {
+          "id": 10,
+          "texto": "S3"
+        },
+        {
+          "id": 11,
+          "texto": "S4"
+        },
+        {
+          "id": 12,
+          "texto": "TT"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "texto": "BMW",
+      "modelos": [
+        {
+          "id": 13,
+          "texto": "Z4"
+        },
+        {
+          "id": 14,
+          "texto": "X5"
+        },
+        {
+          "id": 15,
+          "texto": "SERIE 1"
+        },
+        {
+          "id": 16,
+          "texto": "SERIE 2"
+        },
+        {
+          "id": 17,
+          "texto": "SERIE 3"
+        },
+        {
+          "id": 18,
+          "texto": "SERIE 5"
+        },
+        {
+          "id": 19,
+          "texto": "M ALL MODELS"
+        },
+        {
+          "id": 20,
+          "texto": "X3"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "texto": "Chevrolet",
+      "modelos": [
+        {
+          "id": 21,
+          "texto": "Celta"
+        },
+        {
+          "id": 22,
+          "texto": "Agile"
+        },
+        {
+          "id": 23,
+          "texto": "Astra"
+        },
+        {
+          "id": 24,
+          "texto": "Aveo"
+        },{
+          "id": 25,
+          "texto": "Camaro"
+        },
+        {
+          "id": 26,
+          "texto": "Corsa"
+        },
+        {
+          "id": 27,
+          "texto": "Cruze"
+        },
+        {
+          "id": 28,
+          "texto": "Meriva"
+        },
+        {
+          "id": 29,
+          "texto": "Onix"
+        },
+        {
+          "id": 30,
+          "texto": "S-10"
+        },
+        {
+          "id": 31,
+          "texto": "Vectra"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "texto": "Citroen",
+      "modelos": [
+        {
+          "id": 32,
+          "texto": "C3"
+        },
+        {
+          "id": 33,
+          "texto": "C4"
+        },
+        {
+          "id": 34,
+          "texto": "DS3"
+        },
+        {
+          "id": 35,
+          "texto": "DS4"
+        },{
+          "id": 36,
+          "texto": "CAPTUS"
+        },
+        {
+          "id": 37,
+          "texto": "AIR CROSS"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "texto": "Dodge",
+      "modelos": [
+        {
+          "id": 38,
+          "texto": "Journey"
+        },
+        {
+          "id": 39,
+          "texto": "RAM"
+        },
+        {
+          "id": 40,
+          "texto": "Charger"
+        },
+        {
+          "id": 41,
+          "texto": "Challenger"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "texto": "Fiat",
+      "modelos": [
+        {
+          "id": 42,
+          "texto": "Bravo"
+        },
+        {
+          "id": 43,
+          "texto": "147"
+        },
+        {
+          "id": 44,
+          "texto": "500"
+        },
+        {
+          "id": 45,
+          "texto": "Toro"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "texto": "Ford",
+      "modelos": [
+        {
+          "id": 46,
+          "texto": "EcoSport"
+        },
+        {
+          "id": 47,
+          "texto": "F100"
+        },
+        {
+          "id": 48,
+          "texto": "Falcon"
+        },
+        {
+          "id": 49,
+          "texto": "Fiesta"
+        },{
+          "id": 50,
+          "texto": "Focus"
+        },
+        {
+          "id": 51,
+          "texto": "Ranger"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "texto": "Honda",
+      "modelos": [
+        {
+          "id": 52,
+          "texto": "City"
+        },
+        {
+          "id": 53,
+          "texto": "Civic"
+        },
+        {
+          "id": 54,
+          "texto": "CRV"
+        },
+        {
+          "id": 55,
+          "texto": "Fit"
+        },{
+          "id": 56,
+          "texto": "HRV"
+        },
+        {
+          "id": 57,
+          "texto": "Accord"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "texto": "Jeep",
+      "modelos": [
+        {
+          "id": 58,
+          "texto": "Compass"
+        },
+        {
+          "id": 59,
+          "texto": "Cherokee"
+        },
+        {
+          "id": 60,
+          "texto": "Renegade"
+        },
+        {
+          "id": 61,
+          "texto": "Gran Cherokee"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "texto": "Kia",
+      "modelos": [
+        {
+          "id": 62,
+          "texto": "Avella"
+        },
+        {
+          "id": 63,
+          "texto": "Picanto"
+        },
+        {
+          "id": 64,
+          "texto": "Sorento"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "texto": "Land Rover",
+      "modelos": [
+        {
+          "id": 65,
+          "texto": "Freelander"
+        },
+        {
+          "id": 66,
+          "texto": "Defender"
+        },
+        {
+          "id": 67,
+          "texto": "Discovery 3"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "texto": "Mercedes Benz",
+      "modelos": [
+        {
+          "id": 68,
+          "texto": "Sprinter"
+        },
+        {
+          "id": 69,
+          "texto": "Clase A"
+        },
+        {
+          "id": 70,
+          "texto": "Clase B"
+        },
+        {
+          "id": 71,
+          "texto": "Clase D"
+        },{
+          "id": 72,
+          "texto": "Vito"
+        },
+        {
+          "id": 73,
+          "texto": "AMG"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "texto": "Mini",
+      "modelos": [
+        {
+          "id": 74,
+          "texto": "Mini"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "texto": "Mitsubishi",
+      "modelos": [
+        {
+          "id": 75,
+          "texto": "Montero"
+        },
+        {
+          "id": 76,
+          "texto": "Lancer"
+        },
+        {
+          "id": 77,
+          "texto": "Evo"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "texto": "Nissan",
+      "modelos": [
+        {
+          "id": 78,
+          "texto": "March"
+        },
+        {
+          "id": 79,
+          "texto": "Tiida"
+        },
+        {
+          "id": 80,
+          "texto": "350Z"
+        },
+        {
+          "id": 81,
+          "texto": "Frontier"
+        },{
+          "id": 82,
+          "texto": "Note"
+        },
+        {
+          "id": 83,
+          "texto": "Versa"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "texto": "Peugeot",
+      "modelos": [
+        {
+          "id": 84,
+          "texto": "207"
+        },
+        {
+          "id": 85,
+          "texto": "208"
+        },
+        {
+          "id": 86,
+          "texto": "206"
+        },
+        {
+          "id": 87,
+          "texto": "307"
+        },{
+          "id": 88,
+          "texto": "308"
+        },
+        {
+          "id": 89,
+          "texto": "2008"
+        },
+        {
+          "id": 90,
+          "texto": "3008"
+        },
+        {
+          "id": 91,
+          "texto": "5008"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "texto": "Porsche",
+      "modelos": [
+        {
+          "id": 92,
+          "texto": "911"
+        },
+        {
+          "id": 93,
+          "texto": "GT2"
+        },
+        {
+          "id": 94,
+          "texto": "GT3"
+        },
+        {
+          "id": 95,
+          "texto": "Cayenne"
+        },{
+          "id": 96,
+          "texto": "Cayman"
+        },
+        {
+          "id": 97,
+          "texto": "918"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "texto": "Renault",
+      "modelos": [
+        {
+          "id": 84,
+          "texto": "Clio"
+        },
+        {
+          "id": 85,
+          "texto": "Kangoo"
+        },
+        {
+          "id": 86,
+          "texto": "Fluence"
+        },
+        {
+          "id": 87,
+          "texto": "Megane"
+        },{
+          "id": 88,
+          "texto": "Koleos"
+        },
+        {
+          "id": 89,
+          "texto": "Sandero"
+        },
+        {
+          "id": 90,
+          "texto": "Torino"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "texto": "Seat",
+      "modelos": [
+        {
+          "id": 91,
+          "texto": "Leon"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "texto": "Toyota",
+      "modelos": [
+        {
+          "id": 92,
+          "texto": "Yaris"
+        },
+        {
+          "id": 93,
+          "texto": "Corolla"
+        },
+        {
+          "id": 94,
+          "texto": "Etios"
+        },
+        {
+          "id": 95,
+          "texto": "Hilux"
+        },{
+          "id": 96,
+          "texto": "SW4"
+        },
+        {
+          "id": 97,
+          "texto": "RAV4"
+        },
+        {
+          "id": 98,
+          "texto": "Hibrido"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "texto": "Suzuki",
+      "modelos": [
+        {
+          "id": 99,
+          "texto": "Swift"
+        },
+        {
+          "id": 100,
+          "texto": "Vitara"
+        },
+        {
+          "id": 101,
+          "texto": "Fun"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "texto": "Subaru",
+      "modelos": [
+        {
+          "id": 102,
+          "texto": "Impresa"
+        },
+        {
+          "id": 103,
+          "texto": "WXR"
+        },
+        {
+          "id": 104,
+          "texto": "Legacy"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "texto": "Volvo",
+      "modelos": [
+        {
+          "id": 105,
+          "texto": "S30"
+        },
+        {
+          "id": 106,
+          "texto": "S60"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "texto": "Volkswagen",
+      "modelos": [
+        {
+          "id": 107,
+          "texto": "Gol"
+        },
+        {
+          "id": 108,
+          "texto": "Amarok"
+        },
+        {
+          "id": 109,
+          "texto": "Bora"
+        },
+        {
+          "id": 110,
+          "texto": "Golf"
+        },{
+          "id": 111,
+          "texto": "Beattle"
+        },
+        {
+          "id": 112,
+          "texto": "Passat"
+        },
+        {
+          "id": 113,
+          "texto": "Polo"
+        },
+        {
+          "id": 114,
+          "texto": "Scirocco"
+        }
+      ]
+    }
+  ],
+  "markers": [
+    {
+      "id": 0,
+      "coords": {
+        "lat": -34.609648,
+        "lng": -58.429089
+      },
+      "precio": 50,
+      "km": 50,
+      "marca": "Mercedes Benz",
+      "modelo": "C250 COUPE",
+      "ano": 2012,
+      "foto": "https://www.iconninja.com/files/595/83/747/mercedes-benz-icon.png",
+      "color": "Blanco",
+      "telefonoContacto": null,
+      "emailContacto": null,
+      "residenciaContacto": null,
+      "reservado": false,
+      "dniContacto": 19025117
+    },
+    {
+      "id": 1,
+      "coords": {
+        "lat": -34.605174,
+        "lng": -58.432752
+      },
+      "precio": 30,
+      "km": 25,
+      "marca": "Ford",
+      "modelo": "Focus",
+      "ano": 2014,
+      "foto": "https://cdn.iconscout.com/icon/free/png-256/ford-1-202767.png",
+      "color": "Gris",
+      "telefonoContacto": null,
+      "emailContacto": null,
+      "residenciaContacto": null,
+      "reservado": false,
+      "dniContacto": 38993029
+    },
+    {
+      "id": 2,
+      "coords": {
+        "lat": -34.605421,
+        "lng": -58.417517
+      },
+      "precio": 43,
+      "km": 10.5,
+      "marca": "Jeep",
+      "modelo": "Renegade",
+      "ano": 2016,
+      "foto": "https://cdn.iconscout.com/icon/free/png-256/jeep-59-202822.png",
+      "color": "Negro",
+      "telefonoContacto": null,
+      "emailContacto": null,
+      "residenciaContacto": null,
+      "reservado": false,
+      "dniContacto": 41834850
+    }
+  ],
+  "vendedores": [
+    {
+      "id": 0,
+      "nombreContacto": "Matias",
+      "telefonoContacto": 155953432,
+      "emailContacto": "matias@ort.com",
+      "residenciaContacto": "Palermo",
+      "dniContacto": 41834850
+    },
+    {
+      "id": 1,
+      "nombreContacto": "Fede",
+      "telefonoContacto": 123412412,
+      "emailContacto": "fede@ort.com",
+      "residenciaContacto": "Belgrano",
+      "dniContacto": 38993029
+    },
+    {
+      "id": 2,
+      "nombreContacto": "Carlos",
+      "telefonoContacto": 155953432,
+      "emailContacto": "carlos@ort.com",
+      "residenciaContacto": "San isidro",
+      "dniContacto": 19025117
+    }
+  ]
+}
