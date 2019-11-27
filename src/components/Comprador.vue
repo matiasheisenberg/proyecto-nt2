@@ -77,6 +77,7 @@
 </template>
 
 <script>
+import db from '../db.json';
 export default {
   data() {
     return {
@@ -135,7 +136,7 @@ export default {
     }
   }
 };
-import db from '../db.json';
+
 </script>
 
 <style>
