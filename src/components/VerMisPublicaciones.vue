@@ -12,7 +12,8 @@
          >
             <b-card-text>
                <p><strong>Marca:</strong> {{ marker.marca }}</p>
-               <p><strong>Reservado: </strong>{{marker.reservado}}
+               <p v-if="marker.reservado"><strong>Reservado:</strong> Esta reservado</p>
+               <p v-else><strong>Reservado:</strong> No Esta reservado</p>
                <p><strong>Modelo:</strong> {{ marker.modelo }}</p>
                <p><strong>Año:</strong> {{ marker.ano }}</p>
                <p><strong>Kilometros:</strong> {{ marker.km }} kms</p>

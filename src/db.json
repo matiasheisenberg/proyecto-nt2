@@ -720,6 +720,45 @@
       "residenciaContacto": null,
       "reservado": false,
       "dniContacto": 41834850
+    },
+    {
+      "coords": {
+        "lat": -54,
+        "lng": -54
+      },
+      "precio": "45646",
+      "km": "5484",
+      "marca": "BMW",
+      "modelo": "X5",
+      "ano": "1976",
+      "foto": "google.com",
+      "color": "red",
+      "nombreContacto": "Jroge",
+      "telefonoContacto": "4564151858",
+      "emailContacto": "feedecs@hotmail.com",
+      "residenciaContacto": "caba",
+      "dniContacto": "389978842",
+      "dniState": "valid",
+      "id": 3
+    },
+    {
+      "coords": {
+        "lat": 54,
+        "lng": -54
+      },
+      "precio": "456464",
+      "km": "5464564564",
+      "marca": "Dodge",
+      "modelo": "RAM",
+      "ano": null,
+      "foto": "https://cdn4.iconfinder.com/data/icons/contact-us-19/48/35-512.png",
+      "color": "red",
+      "nombreContacto": "Morti",
+      "telefonoContacto": "45546548",
+      "emailContacto": "feedecs@hotmail.com",
+      "residenciaContacto": "caba",
+      "dniContacto": "289930257",
+      "id": 4
     }
   ],
   "vendedores": [
@@ -746,6 +785,22 @@
       "emailContacto": "carlos@ort.com",
       "residenciaContacto": "San isidro",
       "dniContacto": 19025117
+    },
+    {
+      "id": 3,
+      "nombreContacto": "Jroge",
+      "telefonoContacto": 4564151858,
+      "emailContacto": "feedecs@hotmail.com",
+      "residenciaContacto": "caba",
+      "dniContacto": "389978842"
+    },
+    {
+      "id": 4,
+      "nombreContacto": "Morti",
+      "telefonoContacto": 45546548,
+      "emailContacto": "feedecs@hotmail.com",
+      "residenciaContacto": "caba",
+      "dniContacto": "289930257"
     }
   ]
 }

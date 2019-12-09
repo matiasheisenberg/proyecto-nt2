@@ -321,14 +321,14 @@ export default {
           telefonoContacto: parseInt(this.auto.telefonoContacto),
           emailContacto: this.auto.emailContacto,
           residenciaContacto: this.auto.residenciaContacto,
-          dniContacto: this.auto.dniContacto,
+          dniContacto: parseInt(this.auto.dniContacto),
         });
       } else {
         this.auto.nombreContacto = usuario.nombreContacto;
         this.auto.telefonoContacto = usuario.telefonoContacto;
         this.auto.emailContacto = usuario.emailContacto;
         this.auto.residenciaContacto = usuario.residenciaContacto;
-        this.auto.dniContacto = usuario.dniContacto;
+        this.auto.dniContacto = parseInt(usuario.dniContacto);
       }
 
       // Subimos los datos del nuevo marker
