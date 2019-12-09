@@ -5,9 +5,16 @@
 ```
 npm install
 ```
+
 #### Compilar para desarrollo
 ```
 npm run serve
+```
+
+#### Levantar servidor
+```
+cd src/
+json-server --watch db.json
 ```
 
 #### Compilar para produccion

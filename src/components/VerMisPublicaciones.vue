@@ -30,13 +30,19 @@
 </template>
 
 <script>
-import db from '../db.json';
+import axios from 'axios';
+
 export default {
    data() {
       return {
-         a: db.markers,
-         markers: db.markers.filter(marker => marker.dniContacto === JSON.parse(localStorage.getItem('usuarioDni'))),
+         markers: [],
       };
+   },
+   created: function() {
+      axios.get('http://localhost:3000/markers')
+         .then((response) => {
+            this.markers = response.data.filter(marker => marker.dniContacto === JSON.parse(localStorage.getItem('usuarioDni')));
+         })
    }
 }
 </script>

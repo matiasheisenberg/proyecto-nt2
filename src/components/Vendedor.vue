@@ -185,7 +185,7 @@
 
 
 <script>
-import db from '../db.json';
+import axios from 'axios';
 
 export default {
   data() {
@@ -212,8 +212,32 @@ export default {
       dniIngresado: localStorage.getItem('usuarioEncontrado') ? JSON.parse(localStorage.getItem('usuarioDni')) : null,
       dniIngresadoState: null,
       usuarioEncontrado: localStorage.getItem('usuarioEncontrado') ? JSON.parse(localStorage.getItem('usuarioEncontrado')) : false,
-      arrayDeMarcas: db.marcas,
+      arrayDeMarcas: [],
+      vendedores: [],
+      markers: [],
     };
+  },
+  created: function() {
+    // Hacemos todo lo necesario antes de que se vea la pagina.
+    let añoMinimoDesdeServicio = 1885 // VENDRIA DESDE UN SERVICIO
+    let añoMaximoDesdeServicio = 2019 // VENDRIA DESDE UN SERVICIO
+    this.añoMinimo = añoMinimoDesdeServicio;
+    this.añoMaximo = añoMaximoDesdeServicio;
+
+    axios.get('http://localhost:3000/marcas')
+      .then((response) => {
+        this.arrayDeMarcas = response.data;
+      })
+
+    axios.get('http://localhost:3000/vendedores')
+      .then((response) => {
+        this.vendedores = response.data;
+      })
+
+     axios.get('http://localhost:3000/markers')
+      .then((response) => {
+        this.markers = response.data;
+      })
   },
   // define métodos dentro del objeto `methods`
   methods: {
@@ -232,7 +256,7 @@ export default {
       this.handleModalSubmit();
     },
     handleAutenticacion() {
-      const usuario = db.vendedores.find(vendedor => vendedor.dniContacto === parseInt(this.dniIngresado));
+      const usuario = this.vendedores.find(vendedor => vendedor.dniContacto === parseInt(this.dniIngresado));
       
       if (usuario) {
         this.usuarioEncontrado = true;
@@ -281,18 +305,18 @@ export default {
     onSubmit(evt) {
       evt.preventDefault();
       
-      const usuario = db.vendedores.find(vendedor => vendedor.dniContacto === this.dniIngresado);
+      const usuario = this.vendedores.find(vendedor => vendedor.dniContacto === this.dniIngresado);
 
       this.auto.coords.lat = parseFloat(this.auto.coords.lat);
       this.auto.coords.lng = parseFloat(this.auto.coords.lng);
       this.auto.marca = this.auto.marca.texto;
-      this.auto.id = db.markers[db.markers.length -1].id + 1;
+      this.auto.id = this.markers[this.markers.length - 1].id + 1;
 
       // Subimos los datos del vendedor si no existe
       // Si existe cargamos los datos del vendedor
       if (!this.usuarioEncontrado) {
-        db.vendedores.push({
-          id: db.vendedores[d.vendedores.length -1].id + 1,
+        axios.post('http://localhost:3000/vendedores', {
+          id: this.vendedores[this.vendedores.length - 1].id + 1,
           nombreContacto: this.auto.nombreContacto,
           telefonoContacto: parseInt(this.auto.telefonoContacto),
           emailContacto: this.auto.emailContacto,
@@ -308,7 +332,7 @@ export default {
       }
 
       // Subimos los datos del nuevo marker
-      db.markers.push(this.auto);
+      axios.post('http://localhost:3000/markers', this.auto);
 
       // Mostramos un mensaje de exito
       this.$bvToast.toast(`Se publico el vehiculo correctamente`, {
@@ -316,30 +340,7 @@ export default {
         variant: 'success',
         solid: true
       });
-
-      // Resetiamos todos los valores por default
-      //this.auto.coords = { lat: null, 
-      //lng: null };
-      //this.auto.precio = null;
-      //this.auto.km = null;
-      //this.auto.marca = null;
-      //this.auto.modelo = null;
-      //this.auto.ano = null;
-      //this.auto.foto = null;
-      //this.auto.color = null;
-      //this.auto.nombreContacto = null;
-      //this.auto.telefonoContacto = null;
-      //this.auto.emailContacto = null;
-      //this.auto.residenciaContacto = null;
     },
   },
-  created() {
-    // Hacemos todo lo necesario antes de que se vea la pagina.
-    let añoMinimoDesdeServicio = 1885 // VENDRIA DESDE UN SERVICIO
-    let añoMaximoDesdeServicio = 2019 // VENDRIA DESDE UN SERVICIO
-    this.añoMinimo = añoMinimoDesdeServicio;
-    this.añoMaximo = añoMaximoDesdeServicio;
-    this.auto.año = añoMinimoDesdeServicio;
-  }
 };
 </script>

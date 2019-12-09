@@ -3,6 +3,7 @@
       <h1>Detalles del vendedor</h1>
       <b-card
          class="mb-2"
+         v-if="vendedores.length > 0"
       >
          <b-card-text>
             <p><strong>Nombre de contacto:</strong> {{ vendedores[$route.params.id].nombreContacto }}</p>
@@ -15,13 +16,19 @@
 </template>
 
 <script>
-import db from '../db.json';
+import axios from 'axios';
 
 export default {
    data() {
       return {
-         vendedores: db.vendedores,
+         vendedores: [],
       };
+   },
+   created: function() {
+      axios.get('http://localhost:3000/vendedores')
+         .then((response) => {
+            this.vendedores = response.data;
+         })
    }
 }
 </script>

@@ -77,7 +77,8 @@
 </template>
 
 <script>
-import db from '../db.json';
+import axios from 'axios';
+
 export default {
   data() {
     return {
@@ -87,9 +88,15 @@ export default {
       modalShow: false,
       emailIngresado: null,
       emailIngresadoState: null,
-      markers: db.markers,
+      markers: [],
       markerSelected: null,
     };
+  },
+  created: function() {
+    axios.get('http://localhost:3000/markers')
+      .then((response) => {
+        this.markers = response.data;
+      })
   },
   methods: {
     clickMarker(marker) {
