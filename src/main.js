@@ -11,7 +11,7 @@ Vue.use(VueRouter)
 Vue.use(BootstrapVue)
 Vue.use(VueGoogleMaps, {
   load: {
-    key: 'AIzaSyCP8VR1P1gTfaDnwWNo_JnSUc-8fjiQcsI',
+    key: '-',
     libraries: 'places', // This is required if you use the Autocomplete plugin
     // OR: libraries: 'places,drawing'
     // OR: libraries: 'places,drawing,visualization'
